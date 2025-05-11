@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="todo-card">
+      <div class="header">
+        <h1 class="title">
+          <i class="fas fa-check-circle"></i>
+          Yapılacaklar Listesi
+        </h1>
+        <div class="stats">
+          <span class="total-tasks">Toplam: <span id="total-count">0</span></span>
+          <span class="completed-tasks">Tamamlanan: <span id="completed-count">0</span></span>
+        </div>
+      </div>
+
+      <form id="todo-form">
+        <div class="input-group">
+          <input type="text" id="todo-input" placeholder="Yeni görev ekle..." autocomplete="off" />
+          <input type="date" id="todo-date" />
+          <select id="todo-priority">
+            <option value="normal">Normal</option>
+            <option value="high">Yüksek</option>
+            <option value="low">Düşük</option>
+          </select>
+        </div>
+        <button type="submit">
+          <i class="fas fa-plus"></i>
+          Ekle
+        </button>
+      </form>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Tümü</button>
+        <button class="filter-btn" data-filter="active">Aktif</button>
+        <button class="filter-btn" data-filter="completed">Tamamlanan</button>
+      </div>
+
+      <ul id="todo-list"></ul>
+      
+      <p id="empty-message">
+        <i class="fas fa-clipboard-list"></i>
+        Henüz görev eklenmemiş. Yeni bir görev ekleyin!
+      </p>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html> 

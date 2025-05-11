@@ -1,0 +1,29 @@
+# Sistem dosyaları
+.DS_Store
+Thumbs.db
+
+# IDE ve editör dosyaları
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Bağımlılık dizinleri
+node_modules/
+vendor/
+
+# Log dosyaları
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Derleme çıktıları
+dist/
+build/
+out/
+
+# Geçici dosyalar
+tmp/
+temp/ 
